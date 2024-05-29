@@ -5,10 +5,10 @@ import mysql2 from "mysql2";
 dotenv.config();
 
 const db = new Sequelize( {
-  database:'b0nyhz8fuo0krnh7sxzy',
-  username:'uj1tf4aucwtutx1j',
-  password:'87ZEHM9nrC7Iv4DqjsmY',
-  host: 'b0nyhz8fuo0krnh7sxzy-mysql.services.clever-cloud.com',
+  database:process.env.DB_NAME,
+  username:process.env.DB_USERNAME,
+  password:process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
   dialect: "mysql",
   dialectModule: mysql2,
 });
